@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">{{blog.title}}</div>
+            <div class="card-body">{{blog.message}}</div>
+            <div class="card-footer"></div>
+        </div>
+        {% for comment in comments %}
+       
+            <div class="col-sm-8">
+                {{comment.comment}}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock%}

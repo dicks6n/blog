@@ -1,0 +1,4 @@
+Hello {{member.username}}
+This is to alert you that a new blog was posted today. Go check it out
+
+The Developers' blog team

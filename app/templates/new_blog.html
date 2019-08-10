@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+<div class="container">
+  <h3> {{user.username| capitalize}} </h3>
+  <h3>New Blog</h3>
+  <div class="boring">
+    {{wtf.quick_form(BlogForm)}}
+  </div>
+
+
+</div>
+{% endblock %}
