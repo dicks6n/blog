@@ -47,3 +47,10 @@ def profile(uname):
         abort(404)
 
     return render_template("profile/profile.html", user = user, blogs = blogs) 
+
+@main.route('/user/<uname>/update',methods = ['GET','POST'])
+@login_required
+def update_profile(uname):
+    user = User.query.filter_by(username = uname).first()
+    if user is None:
+        abort(404)
