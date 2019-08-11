@@ -16,7 +16,7 @@
 
 {% block content %}
 {% if current_user.is_authenticated %}
-<a href="/user/{{current_user.username}}/blog" class="btn btn-success">+ Blog</a>
+<a href="/user/{{current_user.username}}/blog" class="btn btn-danger">Add Blog</a>
 
 {% endif %}
 <div class="contaier" style=" height : 100% background-repeat: no-repeat;background-size: cover; background-image:url(static/photos/pink.jpg)">
@@ -26,12 +26,6 @@
         <div class="card" style="width: 18rem;">
             </div>
         </div>
-        <!-- <h3>say something meaningful?</h3>
-        <h2>Get started:</h2>
-        <ol>
-            <li><h4>Sign up and login to access content</h4></li>
-            <li><h4>Receive a welcoming email once you sign up</h4></li>
-        </ol> -->
     </div>
 </div>
 
@@ -40,7 +34,7 @@
 <hr>
 <div class="card" style = "text-align:center">
         <div class="card-header">
-          Random Quote
+         <strong>Random Quote</strong>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -108,7 +102,7 @@
     <br>
     {% endfor %}
     {% else %}
-    <h4>There are no blogs at the moment Login or Signup if you don't have an account to post blogs</h4>
+    <h4></h4> Login or Signup if you don't have an account to post blogs.</h4>
     {% if current_user.is_authenticated %}
      <a href="/user/{{current_user.username}}/blog" class="btn btn-success ">+ Blog</a>
 
