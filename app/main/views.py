@@ -28,6 +28,7 @@ def index():
         return redirect(url_for('main.index'))
     else:
         return render_template('index.html', title = title, blogs = allBlogs, quote = quote, comments = comments)
+
 @main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()
@@ -65,4 +66,24 @@ def update_profile(uname):
 
         return redirect(url_for('.profile',uname=user.username))
 
-    return render_template('profile/update.html',form =form,user=user)   
+    return render_template('profile/update.html',form =form,user=user)  
+
+@main.route('/user/<uname>/update/pic',methods= ['POST'])
+@login_required
+def update_pic(uname):
+    user = User.query.filter_by(username = uname).first()
+    if 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        path = f'photos/{filename}'
+        user.profile_pic_path = path
+        db.session.commit()
+    return redirect(url_for('main.profile',uname=uname))
+@main.route('/user/<uname>/blog',methods= ['GET','POST'])
+@login_required
+def new_blog(uname):
+    user = User.query.filter_by(username = uname).first()
+    if user is None:
+        abort(404)
+
+    form = BlogForm()
+    blog = Blog()
