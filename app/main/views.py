@@ -18,3 +18,4 @@ def index():
     quote = get_quote()
     comments = Comment.query.all()
     allBlogs = Blog.query.all()
+    
