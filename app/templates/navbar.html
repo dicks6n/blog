@@ -1,5 +1,5 @@
-<div class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
+<nav class="navbar navbar-inverse"  role="navigation">
+    <div class="container-fluid" >
         <div class="navbar-header">
             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -16,7 +16,7 @@
                 <li style="color:white;padding:15px;">{{current_user.username}}</li>
                 <li><a href="{{url_for('auth.logout')}}">Sign Out</a></li>
                 {% else %}
-                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                <li><a href="{{url_for('auth.login')}}"><span class="glyphicon glyphicon-log-in"></span>Sign in</a></li>
                 {% endif %}
             </ul>
         </div>
