@@ -1,6 +1,6 @@
-export SECRET_KEY='lordoyo'
-export MAIL_USERNAME='johnkojo7777@gmail.com'
-export MAIL_PASSWORD='soliderclone'
-export DATABASE_URL='postgresql+psycopg2://lorddoyo:adanog@localhost/blogboring'
+export SECRET_KEY='dikkymccria'
+export MAIL_USERNAME='dikkymccria@gmail.com'
+export MAIL_PASSWORD='dikky5512'
+export DATABASE_URL='postgresql+psycopg2://user:slimedikky@localhost/blog'
 
-python3 manage.py runserver
+python3.7 manage.py runserver
