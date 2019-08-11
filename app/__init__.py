@@ -13,7 +13,7 @@ login_manager.login_view = 'auth.login'
 
 bootstrap = Bootstrap()
 db = SQLAlchemy()
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 photos = UploadSet('photos', IMAGES)
 
 mail = Mail()
