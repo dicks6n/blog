@@ -1,5 +1,5 @@
 # blog
-**By** _ DICKSON MACHARIA MAINA
+**By**_DICKSON MACHARIA MAINA
 
 
 **Description**
